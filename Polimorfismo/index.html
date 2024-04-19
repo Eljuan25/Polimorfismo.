@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades</title>
+</head>
+<body>
+    <h1>Actividades</h1>
+
+    <button onclick="actividad1()">Actividad 1</button>
+    <button onclick="actividad2()">Actividad 2</button>
+    <button onclick="actividad3()">Actividad 3</button>
+    <button onclick="actividad4()">Actividad 4</button>
+    <button onclick="actividad5()">Actividad 5</button>
+    <button onclick="actividad6()">Actividad 6</button>
+
+    <script>
+        // Actividad 1
+        class Animal {
+            hablar() {
+                alert("El animal hace un sonido");
+            }
+        }
+
+        class Perro extends Animal {
+            hablar() {
+                alert("El perro ladra");
+            }
+        }
+
+        class Gato extends Animal {
+            hablar() {
+                alert("El gato maúlla");
+            }
+        }
+
+        function actividad1() {
+            const perro = new Perro();
+            perro.hablar(); // Alerta: El perro ladra
+
+            const gato = new Gato();
+            gato.hablar(); // Alerta: El gato maúlla
+        }
+
+        // Actividad 2
+        class Figura {
+            calcularArea() {
+                alert("El área de la figura es desconocida");
+            }
+        }
+
+        class Cuadrado extends Figura {
+            constructor(lado) {
+                super();
+                this.lado = lado;
+            }
+
+            calcularArea() {
+                alert("El área del cuadrado es: " + (this.lado * this.lado));
+            }
+        }
+
+        class Circulo extends Figura {
+            constructor(radio) {
+                super();
+                this.radio = radio;
+            }
+
+            calcularArea() {
+                alert("El área del círculo es: " + (Math.PI * this.radio ** 2));
+            }
+        }
+
+        function actividad2() {
+            const cuadrado = new Cuadrado(5);
+            cuadrado.calcularArea(); // Alerta: El área del cuadrado es: 25
+
+            const circulo = new Circulo(3);
+            circulo.calcularArea(); // Alerta: El área del círculo es: aproximadamente 28.27
+        }
+
+        // Actividad 3
+        class Persona {
+            presentarse() {
+                alert("Hola, mi nombre es {nombre}");
+            }
+        }
+
+        class Estudiante extends Persona {
+            presentarse() {
+                alert("Hola, soy {nombre} y soy estudiante");
+            }
+        }
+
+        class Profesor extends Persona {
+            presentarse() {
+                alert("Hola, soy {nombre} y soy profesor");
+            }
+        }
+
+        // Actividad 4
+        class Instrumento {
+            tocar() {
+                alert("Tocando el instrumento");
+            }
+        }
+
+        class Guitarra extends Instrumento {
+            tocar() {
+                alert("Tocando la guitarra");
+            }
+        }
+
+        class Piano extends Instrumento {
+            tocar() {
+                alert("Tocando el piano");
+            }
+        }
+
+        class Bateria extends Instrumento {
+            tocar() {
+                alert("Tocando la batería");
+            }
+        }
+
+        // Actividad 5
+        class Bebida {
+            preparar() {
+                alert("Preparando la bebida");
+            }
+        }
+
+        class Cafe extends Bebida {
+            preparar() {
+                alert("Preparando el café");
+            }
+        }
+
+        class Te extends Bebida {
+            preparar() {
+                alert("Preparando el té");
+            }
+        }
+
+        class Refresco extends Bebida {
+            preparar() {
+                alert("Preparando el refresco");
+            }
+        }
+
+        // Actividad 6
+        class Fruta {
+            calcularPrecio() {
+                alert("Calculando el precio de la fruta");
+            }
+        }
+
+        class Manzana extends Fruta {
+            calcularPrecio() {
+                alert("Calculando el precio de la manzana");
+            }
+        }
+
+        class Platano extends Fruta {
+            calcularPrecio() {
+                alert("Calculando el precio del plátano");
+            }
+        }
+
+        class Naranja extends Fruta {
+            calcularPrecio() {
+                alert("Calculando el precio de la naranja");
+            }
+        }
+
+    </script>
+</body>
+</html>
